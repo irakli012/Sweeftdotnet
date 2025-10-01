@@ -17,5 +17,10 @@ class Program
         Console.WriteLine("Task 3 --- Smallest positive missing number");
         Console.WriteLine(SmallestMissing.NotContains(new int[] { 1, 3, 4, 5 }));
         Console.WriteLine(SmallestMissing.NotContains(new int[] {-3, -4, 2, 6}));
+
+        Console.WriteLine();
+        Console.WriteLine("Task 4 --- Parentesis check");
+        Console.WriteLine(Parentheses.IsProperly("() (()"));
+        Console.WriteLine(Parentheses.IsProperly("() ()"));
     }
 }

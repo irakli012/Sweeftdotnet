@@ -12,5 +12,10 @@ class Program
         Console.WriteLine("Task 2 --- Coins");
         Console.WriteLine(CoinsChange.MinSplit(120));
         Console.WriteLine(CoinsChange.MinSplit(50));
+
+        Console.WriteLine();
+        Console.WriteLine("Task 3 --- Smallest positive missing number");
+        Console.WriteLine(SmallestMissing.NotContains(new int[] { 1, 3, 4, 5 }));
+        Console.WriteLine(SmallestMissing.NotContains(new int[] {-3, -4, 2, 6}));
     }
 }

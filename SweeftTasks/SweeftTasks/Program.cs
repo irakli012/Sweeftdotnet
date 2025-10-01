@@ -8,5 +8,9 @@ class Program
         Console.WriteLine(Palindrome.IsPalindrome("car"));
         Console.WriteLine(Palindrome.IsPalindrome("abcba"));
 
+        Console.WriteLine();
+        Console.WriteLine("Task 2 --- Coins");
+        Console.WriteLine(CoinsChange.MinSplit(120));
+        Console.WriteLine(CoinsChange.MinSplit(50));
     }
 }

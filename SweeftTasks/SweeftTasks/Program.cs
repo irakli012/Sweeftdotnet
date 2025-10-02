@@ -22,5 +22,11 @@ class Program
         Console.WriteLine("Task 4 --- Parentesis check");
         Console.WriteLine(Parentheses.IsProperly("() (()"));
         Console.WriteLine(Parentheses.IsProperly("() ()"));
+
+        Console.WriteLine();
+        Console.WriteLine("Task 5 --- Count stair variants");
+        Console.WriteLine(StairVariants.CountVariants(2));
+        Console.WriteLine(StairVariants.CountVariants(5));
+
     }
 }

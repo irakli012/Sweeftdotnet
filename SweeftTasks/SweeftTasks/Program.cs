@@ -1,4 +1,6 @@
 ﻿using SweeftTasks.Algorithms;
+using SweeftTasks.Data;
+using SweeftTasks.Services;
 
 class Program
 {
@@ -28,5 +30,21 @@ class Program
         Console.WriteLine(StairVariants.CountVariants(2));
         Console.WriteLine(StairVariants.CountVariants(5));
 
+        Console.WriteLine();
+        Console.WriteLine("Task 7 --- Teachers for giorgi");
+
+        using (var context = new SchoolDbContext())
+        {
+            context.Database.EnsureCreated();
+            SeedData.Seed(context);
+        }
+
+        var teacherService = new TeacherService();
+        var teachersForGiorgi = teacherService.GetAllTeachersByStudent("Giorgi");
+
+        foreach (var teacher in teachersForGiorgi)
+        {
+            Console.WriteLine($"{teacher.FirstName} {teacher.LastName}  ({teacher.Subject})");
+        }
     }
-}
+}   

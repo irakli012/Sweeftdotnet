@@ -53,5 +53,10 @@ class Program
 
         var countryService = new CountryService();
         await countryService.GenerateCountryDataFiles();
+
+        Console.WriteLine();
+        Console.WriteLine("Task 9 --- SemaphoreSlim Task");
+
+        await SemaphoreTaskService.SemaphoreSlim();
     }
 }   

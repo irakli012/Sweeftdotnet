@@ -1,10 +1,11 @@
 ﻿using SweeftTasks.Algorithms;
 using SweeftTasks.Data;
 using SweeftTasks.Services;
+using System.Threading.Tasks;
 
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         Console.WriteLine("Task 1 --- Palindrome");
         Console.WriteLine(Palindrome.IsPalindrome("car"));
@@ -46,5 +47,11 @@ class Program
         {
             Console.WriteLine($"{teacher.FirstName} {teacher.LastName}  ({teacher.Subject})");
         }
+
+        Console.WriteLine();
+        Console.WriteLine("Task 8 --- Generate countries files");
+
+        var countryService = new CountryService();
+        await countryService.GenerateCountryDataFiles();
     }
 }   
